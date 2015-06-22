@@ -1,7 +1,7 @@
 Python Installation
 1. Install Python 3.4.3. Follow the instructions here: http://www.diveinto.org/python3/installing-python.html
 
-2. Type "python" in the terminal to make sure you're using Python 3 and not Python 2. 
+2. Enter "python" in the terminal to make sure you're using Python 3 and not Python 2. 
 
 
 Running the program
