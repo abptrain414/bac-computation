@@ -87,8 +87,7 @@ def pad_zeroes(bac):
 	"""
 	if bac == '0':
 		bac = '0.00000'
-	else:
-		bac = bac.ljust(7, '0')
+	bac = bac.ljust(7, '0')
 
 	return bac
 
@@ -107,8 +106,8 @@ if __name__ == '__main__':
 
 		bac_list = [] #list of all BACs computed
 		bac_list.append(compute_bac(float(p_list[1][1]), w, r))
-		time_list = []
-		time_list.append(int(p_list[1][0])) #list of inputted timestamps
+		time_list = [] #list of inputted timestamps
+		time_list.append(int(p_list[1][0])) 
 		
 		#header
 		print('\nCase ' + str(case_num) + ':',str(w) + 'kg,', gender)
@@ -142,12 +141,12 @@ if __name__ == '__main__':
 					end_of_file = True
 
 			elif len(p_list[i]) == 0:
+				if i == (len(p_list) - 1):
+					end_of_file = True
 				temp_list = []
 				temp_list.extend(p_list[i+1:])
 				p_list = temp_list 
 				case_num = case_num + 1
-				if i == (len(p_list) - 1):
-					end_of_file = True
 				break
 
 			else:
