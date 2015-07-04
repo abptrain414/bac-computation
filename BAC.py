@@ -91,8 +91,9 @@ def pad_zeroes(bac):
 
 	return bac
 
-if __name__ == '__main__':
-
+def main():
+	"""bac-computation
+	"""
 	p_list = file_input() #list of all inputted values
 	case_num = 1
 	end_of_file = False
@@ -105,17 +106,21 @@ if __name__ == '__main__':
 		total = 0.0
 
 		bac_list = [] #list of all BACs computed
-		bac_list.append(compute_bac(float(p_list[1][1]), w, r))
+		if float(p_list[1][1]) < 0: # first BAC 
+			bac_list.append(0)
+		else:
+			bac_list.append(compute_bac(float(p_list[1][1]), w, r)) 
+
 		time_list = [] #list of inputted timestamps
-		time_list.append(int(p_list[1][0])) 
-		
+		time_list.append(int(p_list[1][0])) #first timestamp
+
 		#header
 		print('\nCase ' + str(case_num) + ':',str(w) + 'kg,', gender)
 		print('{0:12}'.format('Time'), '{0:12}'.format('Entered'), '{0:8}'.format('Total'), '{0:12}'.format('BAC'), 'Time left')
-
+		
 		#main output
 		for i in range(1, len(p_list)):
-			if(p_list[i] != []):
+			if p_list[i] != []:
 				time = int(p_list[i][0])
 
 			if len(p_list[i]) > 1:
@@ -159,3 +164,6 @@ if __name__ == '__main__':
 				print('{0:12}'.format(str(time)), '{0:12}'.format('-'), '{0:8}'.format('-'), '{0:12}'.format(bac), time_left)
 				if i == (len(p_list) - 1):
 					end_of_file = True
+
+if __name__ == '__main__':
+	main()
