@@ -1,5 +1,8 @@
+BAC Computation
+This script reads people's alcohol intake from a file and outputs their BACs at a specified time and how long until alcohol content is cleared from the body. 
+
 Python Installation
-1. Install Python 3.4.3. Follow the instructions here: http://www.diveinto.org/python3/installing-python.html
+1. Install Python 3. Follow the instructions here: http://www.diveinto.org/python3/installing-python.html
 
 2. Enter "python" in the terminal to make sure you're using Python 3 and not Python 2. 
 
