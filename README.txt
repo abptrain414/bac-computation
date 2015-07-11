@@ -1,5 +1,5 @@
 BAC Computation
-This script reads people's alcohol intake from a file and outputs their BACs at a specified time and how long until alcohol content is cleared from the body. 
+This script reads people's alcohol intake from a file then outputs their BACs at a specified time and how long until alcohol content is cleared from the body. 
 
 Python Installation
 1. Install Python 3. Follow the instructions here: http://www.diveinto.org/python3/installing-python.html
